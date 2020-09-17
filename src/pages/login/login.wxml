@@ -1,0 +1,31 @@
+<!--
+ * @Date: 2020-07-18 16:15:00
+ * @LastEditors: kjs
+ * @LastEditTime: 2020-08-05 18:38:59
+ * @FilePath: \clinic-guide\pages\login\login.wxml
+-->
+<nav-bar></nav-bar>
+<view class="login-page">
+    <text class="title">挂号、缴费不用排队了！</text>
+    <view class="input-wrap">
+        <text>手机号</text>
+        <input type="text" placeholder="请输入手机号" />
+        <text>验证码</text>
+        <view class="input-box">
+            <input type="text" placeholder="请输入验证码" />
+            <view class="auth-btn" bindtap="getAuthCode">
+                获取验证码
+            </view>
+        </view>
+    </view>
+    <view class="base-button" bindtap="bringToUser">
+        开始使用
+    </view>
+    <view class="footer">
+        由健康160提供技术支持
+    </view>
+
+    <view class="toast" wx:if="{{isShowToast}}">
+        请输入正确的手机号码～
+    </view>
+</view>
